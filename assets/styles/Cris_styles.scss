@@ -1,0 +1,179 @@
+// COLORS
+$primary-color: #2b272e;
+$secundary-color: #09074f;
+$terciary-color: #56100f;
+$fourty-color: #A22729;
+$text-color: #777;
+$linked-color: #a9d4df;
+$linked-color-2: #6ef0f5;
+
+// FUENTE
+$fuente-titulos: 'Roboto', sans-serif;
+
+// GENERAL
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: $text-color;
+}
+
+
+// Background img
+
+.background-main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/assets/img/background-main-definitive.svg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .background-overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(51, 46, 46, 0.623);
+        z-index: 1;
+    }
+    .contenedor-texto{
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        position: absolute;
+        max-width: 90%;
+        padding: 20px 50px;
+        color: whitesmoke;
+        z-index: 10;
+        text-align: center;
+        word-wrap: break-word;
+        position: relative;
+        .titulo{
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+        .typed{
+            font-weight: 800;
+            font-size: 2rem;
+            @media screen and (min-width: 550px){
+                font-size: 3rem;
+            }
+            .description-name{
+                color: $fourty-color;
+            }
+            .description-color{
+                color: $fourty-color;
+            }
+        }
+    }
+}
+
+
+// ACERCA DE MI
+
+.container-acerca-de-mi {
+    display: flex;
+    justify-content: center;
+    .row-acerca-de-mi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 50px 5px;
+        .col-acerca-de-mi{
+            object-fit: cover;
+            object-position: center;
+            width: 90%;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            transition: all .5s;
+            img{
+                width: 100%;
+                max-width: 370px;
+            }
+            @media screen and (min-width: 1000px) {
+                width: 40%;
+                img{
+                    max-width: 270px;
+                }
+            }
+        }
+        .col-acerca-de-mi-2{
+            margin: 10px 0;
+            color: $text-color;
+            font-size: 1em;
+            font-weight: 400;
+            text-align: justify;
+            transition: all .5s;
+            @media screen and (min-width: 1000px) {
+                width: 60%;
+                padding: 0 20px;
+            }
+            .destacado{
+                font-size: 1.2em;
+                font-weight: 800;
+                text-align: center;
+            }
+        }
+        .oculto{
+            opacity: 0;
+        }
+        .mostrar{
+            opacity: 1;
+        }
+        .abajo{
+            animation: abajo .3s;
+        }
+        
+        @keyframes abajo {
+            0%{
+                transform: translateY(60px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+// FRONT-END STACK
+
+.contenedor-stack{
+    display: flex;
+    flex-wrap: wrap;
+    .stack-title{
+        font-size: 2rem;
+        font-weight: 900;
+        color: $text-color;
+        text-align: center;
+    }
+    .row-stack{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .col-stack{
+        width: 100%;
+        @media screen and (min-width: 600px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .img-stack{
+            object-fit: cover;
+            object-position: center;
+            display: flex;
+            justify-content: center;
+            img{
+                max-width: 150px;
+                width: 100%;
+            }
+        }
+    }
+}

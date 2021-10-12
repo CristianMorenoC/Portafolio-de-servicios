@@ -4,14 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet"> 
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/Cris_styles.css">
+    <title>PORTFOLIO CM</title>
 </head>
 <body>
-    
+
+<!-- BACKGROUND AND TITLE -->
+<div class="background-main">
+    <div class="background-overlay" id="particles-js"></div>
+    <div class="contenedor-texto">
+        <h2 class="titulo">Programacion web / diseño UI / responsive design</h2>
+        <span class="typed"></span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">CM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-center" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Acerca de mi</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Proyectos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item text-center" href="#">Galerias</a></li>
+                        <li><a class="dropdown-item text-center" href="#">Consumo de Apis</a></li>
+                        <li><a class="dropdown-item text-center" href="#">E-comerce</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ACERCA DE MI -->
+
+<div class="container-acerca-de-mi">
+    <div class="row-acerca-de-mi">
+        <div class="col-acerca-de-mi oculto">
+            <img src="./img/CRISTIAN_MORENO.jpg" class="cris" alt="Cristian M. Desarrollador">
+        </div>
+        <div class="col-acerca-de-mi-2 oculto">
+            <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>. Libero, neque voluptas optio nostrum<strong>consectetur adipisicing elit</strong> doloremque ex natus ut in reprehenderit, magnam porro dolores non cumque, nemo ea enim recusandae incidunt deleniti!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, neque voluptas optio<strong>consectetur adipisicing elit</strong> nostrum doloremque ex natus ut in reprehenderit, magnam porro dolores non cumque, nemo ea enim recusandae incidunt deleniti!</p>
+            <p class="destacado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dolore.</p>
+        </div>
+    </div>
+</div>
+
+<!--FRONT-END STACK -->
+<section>
+    <div class="contenedor-stack">
+        <h3 class="stack-title">LENGUAJES Y HERRAMIENTAS UTILIZADOS</h3>
+        <div class="row-stack">
+            <div class="col-stack">
+                <div class="img-stack"><img src="./img/lenguajes/HTML.svg" alt="HTML"></div>
+                <div class="img-stack"><img src="./img/lenguajes/CSS.svg" alt="CSS"></div>
+                <div class="img-stack"><img src="./img/lenguajes/JS.svg" alt="JS"></div>
+            </div>
+            <div class="col-stack">
+                <div class="img-stack"><img src="./img/lenguajes/Bootstrap.svg" alt="Bootstrap"></div>
+                <div class="img-stack"><img src="./img/lenguajes/SASS.svg" alt="SASS"></div>
+                <div class="img-stack"><img src="./img/lenguajes/GIT.svg" alt="GIT"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./particulas/particles.js"></script>
+    <script src="./particulas/config.js"></script>
+    <script src="./typed.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
