@@ -284,6 +284,12 @@ body {
 .contenedor-servicios .row-services .col-services {
   padding: 0 15px;
   margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contenedor-servicios .row-services .col-services .item-services {
@@ -323,7 +329,7 @@ body {
 
 @media screen and (min-width: 1190px) {
   .contenedor-servicios .row-services .col-services {
-    width: 40%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=Cris_styles.css.map */

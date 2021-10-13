@@ -201,6 +201,8 @@ body{
         .col-services{
             padding: 0 15px;
             margin: 50px 0;
+            display: flex;
+            justify-content: space-evenly;
             .item-services{
                 width: 100%;
                 border: 1px solid $terciary-color;
@@ -230,7 +232,7 @@ body{
         }
         @media screen and (min-width: 1190px) {
             .col-services{
-                width: 40%;
+                width: 100%;
             }
         }
     }
