@@ -152,6 +152,7 @@ body{
         font-weight: 900;
         color: $text-color;
         text-align: center;
+        width: 100%;
     }
     .row-stack{
         display: flex;
@@ -173,6 +174,63 @@ body{
             img{
                 max-width: 150px;
                 width: 100%;
+                transition: all .4s;
+            }
+            img:hover{
+                transform: translateY(-10px);
+            }
+        }
+    }
+}
+
+// SERVICIOS
+
+
+.contenedor-servicios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .servicios-title{
+        font-size: 1.5rem;
+    }
+    .row-services{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .col-services{
+            padding: 0 15px;
+            margin: 50px 0;
+            .item-services{
+                width: 100%;
+                border: 1px solid $terciary-color;
+                position: relative;
+                max-width: 400px;
+                .container-icon{
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    top: -15px;
+                    i{
+                        background: white;
+                        padding: 0 10px;
+                        color: $terciary-color;
+                    }
+                }
+                .item-title-services{
+                    text-align: center;
+                    margin-top: 30px
+                }
+                .p-services{
+                    text-align: center;
+                    padding: 0 20px 10px 0;
+                }
+            }
+        }
+        @media screen and (min-width: 1190px) {
+            .col-services{
+                width: 40%;
             }
         }
     }

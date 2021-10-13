@@ -199,6 +199,7 @@ body {
   font-weight: 900;
   color: #777;
   text-align: center;
+  width: 100%;
 }
 
 .contenedor-stack .row-stack {
@@ -242,5 +243,87 @@ body {
 .contenedor-stack .col-stack .img-stack img {
   max-width: 150px;
   width: 100%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.contenedor-stack .col-stack .img-stack img:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.contenedor-servicios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contenedor-servicios .servicios-title {
+  font-size: 1.5rem;
+}
+
+.contenedor-servicios .row-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contenedor-servicios .row-services .col-services {
+  padding: 0 15px;
+  margin: 50px 0;
+}
+
+.contenedor-servicios .row-services .col-services .item-services {
+  width: 100%;
+  border: 1px solid #56100f;
+  position: relative;
+  max-width: 400px;
+}
+
+.contenedor-servicios .row-services .col-services .item-services .container-icon {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -15px;
+}
+
+.contenedor-servicios .row-services .col-services .item-services .container-icon i {
+  background: white;
+  padding: 0 10px;
+  color: #56100f;
+}
+
+.contenedor-servicios .row-services .col-services .item-services .item-title-services {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contenedor-servicios .row-services .col-services .item-services .p-services {
+  text-align: center;
+  padding: 0 20px 10px 0;
+}
+
+@media screen and (min-width: 1190px) {
+  .contenedor-servicios .row-services .col-services {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=Cris_styles.css.map */
