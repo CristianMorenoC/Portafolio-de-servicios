@@ -268,6 +268,8 @@ body {
 
 .contenedor-servicios .servicios-title {
   font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .contenedor-servicios .row-services {
@@ -283,17 +285,20 @@ body {
 
 .contenedor-servicios .row-services .col-services {
   padding: 0 15px;
-  margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 100%;
 }
 
 .contenedor-servicios .row-services .col-services .item-services {
   width: 100%;
+  margin: 50px 0;
   border: 1px solid #56100f;
   position: relative;
   max-width: 400px;
@@ -327,9 +332,9 @@ body {
   padding: 0 20px 10px 0;
 }
 
-@media screen and (min-width: 1190px) {
-  .contenedor-servicios .row-services .col-services {
-    width: 100%;
+@media screen and (max-width: 750px) {
+  .contenedor-servicios .row-services .col-services .item-services {
+    border: none;
   }
 }
 /*# sourceMappingURL=Cris_styles.css.map */
