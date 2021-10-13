@@ -130,7 +130,6 @@ body{
         .abajo{
             animation: abajo .3s;
         }
-        
         @keyframes abajo {
             0%{
                 transform: translateY(60px);
@@ -240,16 +239,44 @@ body{
             }
             @media screen and (min-width:750px){
                 .item-services{
-                    border: 1px solid transparent;
-                    transition: all .3s;
+                    border: 1px solid rgba(150, 150, 150, 0.2);
+                    transition: all .7s;
                     .container-icon{
-                        top: 30px;
+                        top: -40px;
+                        transition: all .7s;
                     }
                     .item-title-services{
                         position: absolute;
                         width: 100%;
-                        bottom: 15px;
+                        transition: all .7s;
                     }
+                    .p-services{
+                        opacity: 0;
+                        // transform: scale(1.2);
+//                         transition: opacity 1.5s;
+                        // transition: scale 1s;
+                    }
+                }
+                .item-services:hover{
+                    border: 1px solid $terciary-color;
+                    .container-icon{
+                        top: -15px;
+                    }
+                    .item-title-services{
+                        position: static;
+                    }
+                    .p-services{
+                        opacity: 1;
+                        animation: aparecio 1.5s;
+                        // transform: scale(1);
+                    }
+                    @keyframes aparecio {
+                        0% {
+                            transform: scale(1.1);
+                        }
+                        100%{
+                            transform: scale(1);
+                        }
                     }
                 }
             }
