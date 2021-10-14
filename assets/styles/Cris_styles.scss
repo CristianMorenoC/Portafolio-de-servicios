@@ -19,6 +19,7 @@ $fuente-titulos: 'Roboto', sans-serif;
 
 body{
     color: $text-color;
+    overflow-x: hidden;
 }
 
 
@@ -63,10 +64,10 @@ body{
                 font-size: 3rem;
             }
             .description-name{
-                color: $fourty-color;
+                color: $linked-color-2;
             }
             .description-color{
-                color: $fourty-color;
+                color: $linked-color-2;
             }
         }
     }
@@ -208,7 +209,7 @@ body{
             .item-services{
                 width: 100%;
                 margin: 50px 0;
-                border: 1px solid $fourty-color;
+                border: 1px solid $linked-color-2;
                 position: relative;
                 max-width: 400px;
                 .container-icon{
@@ -220,7 +221,7 @@ body{
                     i{
                         background: white;
                         padding: 0 10px;
-                        color: $fourty-color;
+                        color: $linked-color-2;
                     }
                 }
                 .item-title-services{
@@ -255,7 +256,7 @@ body{
                     }
                 }
                 .item-services:hover{
-                    border: 1px solid $terciary-color;
+                    border: 1px solid $linked-color-2;
                     .container-icon{
                         top: -15px;
                     }
@@ -305,7 +306,7 @@ body{
         border: none;
         background-color:rgba(0, 0, 0, 0.1);
         i{
-            color: $fourty-color;
+            color: $linked-color-2;
         }
     }
 }
@@ -372,5 +373,91 @@ body{
     }
 }
 
+// CONTACTO
 
+.contact{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    .form-contacto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .container-contacto{
+            .title-contacto{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 50px;
+                color: $primary-color;
+                font-size: 2rem;
+                letter-spacing: 5px;
+                color: rgba(255,255,255,.3);
+                text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+                transition: all .5s;
+            }
+            .title-contacto:hover{
+                color: $linked-color;
+            }
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            .input-contacto{
+                width: 80%;
+                outline: none;
+                border-radius: 5px;
+                margin: 5px 0;
+                border: none;
+                padding: 10px 0;
+                background: linear-gradient(180deg, rgba(26,26,26,1) 79%, rgba(104,102,102,1) 100%);
+                color: rgba(255,255,255,.3);
+                text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+                transition: all 1s;
+            }
+            .input-contacto:focus{
+                background: linear-gradient(180deg, rgba(26,26,26,1) 74%, rgba(187,240,250,1) 97%);
+                color: $linked-color;
+            }
+            .mensaje-contacto{
+                resize: none;
+                outline: none;
+                width: 80%;
+                border-radius: 5px;
+                margin: 5px 0;
+                border: none;
+                background: linear-gradient(180deg, rgba(26,26,26,1) 79%, rgba(104,102,102,1) 100%);
+                color: rgba(255,255,255,.3);
+                text-shadow: 0 0 15px rgba(255,255,255,.5), 0 0 10px rgba(255,255,255,.5);
+                transition: all 1s;
+            }
+            .mensaje-contacto:focus{
+                background: linear-gradient(180deg, rgba(26,26,26,1) 74%, rgba(187,240,250,1) 97%);
+                color: $linked-color;
+            }
+            .button-contacto {background-image: linear-gradient(to right, #314755 0%, #bbf0fa  51%, #314755  100%)}
+            .button-contacto {
+               margin: 10px;
+               padding: 15px 45px;
+               text-align: center;
+               text-transform: uppercase;
+               transition: 0.5s;
+               background-size: 200% auto;
+               color: $linked-color;
+               box-shadow: 0 0 20px #eee;
+               border-radius: 10px;
+               display: block;
+               border: none;
+             }
+             .button-contacto:hover {
+               background-position: right center; /* change the direction of the change here */
+               color: $linked-color-2;
+               text-decoration: none;
+             }
+        }
+    }
+}
 
