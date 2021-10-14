@@ -1,10 +1,10 @@
 
 var typed = new Typed('.typed', {
 	strings: [
-		'<b class="desccription">DISEÑO <span class="description-color">WEB</span></b>',
-		'<b class="desccription"><span class="description-color">FRONT-END: </span>: HTML, JavaScript, CSS, bootstrap, SASS</b>',
+		'<b class="desccription">DISEÑO <span class="description-color"> WEB</span></b>',
+		'<b class="desccription"><span class="description-color">FRONT-END: </span> HTML, JavaScript, CSS, bootstrap, SASS</b>',
 		'<b class="desccription"><span class="description-color">METODOLOGIAS: </span> BEM, SCRUM</b>',
-		'<b class="desccription">DESARROLLADOR WEB: <span class="description-name">CRISTIAN MORENO</span></b>',
+		'<b class="desccription">DESARROLLADOR WEB: <span class="description-name"> CRISTIAN MORENO</span></b>',
 	],
 	// stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 100, // Velocidad en mlisegundos para poner una letra,
@@ -36,3 +36,11 @@ function mostrarElementos() {
 }
 
 window.addEventListener('scroll', mostrarElementos);
+
+
+let buttonMenu = document.getElementById('menu-header');
+let menu = document.querySelector('.header-list');
+
+buttonMenu.addEventListener('click', function(){
+	menu.classList.toggle('visible')
+});

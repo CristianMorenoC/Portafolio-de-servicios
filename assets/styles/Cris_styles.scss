@@ -17,6 +17,11 @@ $fuente-titulos: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: $primary-color;
+}
+
 body{
     color: $text-color;
     overflow-x: hidden;
@@ -72,7 +77,87 @@ body{
         }
     }
 }
+// NAV
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(255,255,255,.05);
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    .header-logo{
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #ffff;
+        margin-left: 20px;
+    }
+    .container-icon-header{
+        display: flex;
+        margin-right: 20px;
+        justify-content: center;
+        .button-icon-header{
+            background-color: transparent;
+            border: none;
+            i{
+                color: #ffff;
+            }
+        }
+    }
+    .header-list{
+        width: 100%;
+        position: relative;
+        right: 100%;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        transition: all 1s;
+        .container-item-header{
+            padding: 0;
+            position: absolute;
+            background: $linked-color-2;
+            width: 70vw;
+            top: 50px;
+            height: 70vh;
+            border-radius: 20px;
+            background: transparent;
+            .item-header{
+                font-size: 2rem;
+                font-weight: 900;
+                list-style: none;
+                text-align: center;
+                padding: 30px 0;
+                color: #fff;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+            .item-header:hover{
+                background-color: rgba(255,255,255,.3);
+            }
+        }
+        .container-item-header::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            position: absolute;
+            z-index: -1;
+            background:rgba(0, 0, 0, 0.6);
+            filter: blur(2px);
+        }
+    }
+    .visible{
+        right: 0;
+        opacity: 1;
+    }
 
+}
 
 // ACERCA DE MI
 
@@ -440,23 +525,23 @@ body{
             }
             .button-contacto {background-image: linear-gradient(to right, #314755 0%, #bbf0fa  51%, #314755  100%)}
             .button-contacto {
-               margin: 10px;
-               padding: 15px 45px;
-               text-align: center;
-               text-transform: uppercase;
-               transition: 0.5s;
-               background-size: 200% auto;
-               color: $linked-color;
-               box-shadow: 0 0 20px #eee;
-               border-radius: 10px;
-               display: block;
-               border: none;
-             }
-             .button-contacto:hover {
+                margin: 10px;
+                padding: 15px 45px;
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                color: $linked-color;
+                box-shadow: 0 0 20px #eee;
+                border-radius: 10px;
+                display: block;
+                border: none;
+                }
+                .button-contacto:hover {
                background-position: right center; /* change the direction of the change here */
-               color: $linked-color-2;
-               text-decoration: none;
-             }
+                color: $linked-color-2;
+                text-decoration: none;
+                }
         }
     }
 }

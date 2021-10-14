@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #2b272e;
+}
+
 body {
   color: #777;
   overflow-x: hidden;
@@ -71,6 +76,113 @@ body {
 
 .background-main .contenedor-texto .typed .description-color {
   color: #6ef0f5;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 7vh;
+  background-color: rgba(255, 255, 255, 0.05);
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+
+.header-container .header-logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffff;
+  margin-left: 20px;
+}
+
+.header-container .container-icon-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-container .container-icon-header .button-icon-header {
+  background-color: transparent;
+  border: none;
+}
+
+.header-container .container-icon-header .button-icon-header i {
+  color: #ffff;
+}
+
+.header-container .header-list {
+  width: 100%;
+  position: relative;
+  right: 100%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.header-container .header-list .container-item-header {
+  padding: 0;
+  position: absolute;
+  background: #6ef0f5;
+  width: 70vw;
+  top: 50px;
+  height: 70vh;
+  border-radius: 20px;
+  background: transparent;
+}
+
+.header-container .header-list .container-item-header .item-header {
+  font-size: 2rem;
+  font-weight: 900;
+  list-style: none;
+  text-align: center;
+  padding: 30px 0;
+  color: #fff;
+}
+
+.header-container .header-list .container-item-header .item-header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-container .header-list .container-item-header .item-header:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-container .header-list .container-item-header::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.header-container .visible {
+  right: 0;
+  opacity: 1;
 }
 
 .container-acerca-de-mi {
