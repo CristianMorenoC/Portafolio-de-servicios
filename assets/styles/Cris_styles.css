@@ -18,7 +18,7 @@ body {
 .background-main {
   height: 100vh;
   width: 100vw;
-  background-image: url(/assets/img/background-main-definitive.svg);
+  background-image: url(../img/background-main-definitive.svg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -101,8 +101,12 @@ body {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #ffff;
+  color: #777;
   margin-left: 20px;
+}
+
+.header-container .header-logo:hover {
+  color: #6ef0f5;
 }
 
 .header-container .container-icon-header {
@@ -121,7 +125,11 @@ body {
 }
 
 .header-container .container-icon-header .button-icon-header i {
-  color: #ffff;
+  color: #777;
+}
+
+.header-container .container-icon-header .button-icon-header i:hover {
+  color: #6ef0f5;
 }
 
 .header-container .header-list {
@@ -650,6 +658,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .contact .form-contacto .container-contacto {
@@ -747,8 +756,38 @@ body {
 
 .contact .form-contacto .container-contacto .button-contacto:hover {
   background-position: right center;
-  /* change the direction of the change here */
   color: #6ef0f5;
   text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  .contact .form-contacto .container-contacto {
+    width: 100%;
+  }
+}
+
+.contact .form-contacto .social-networks-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.contact .form-contacto .social-networks-container .social-network-enlace {
+  margin: 10px 0;
+}
+
+.contact .form-contacto .social-networks-container .social-network-enlace i {
+  color: #777;
+}
+
+.contact .form-contacto .social-networks-container .social-network-enlace i:hover {
+  color: #6ef0f5;
 }
 /*# sourceMappingURL=Cris_styles.css.map */

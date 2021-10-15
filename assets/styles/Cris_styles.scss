@@ -33,7 +33,7 @@ body{
 .background-main {
     height: 100vh;
     width: 100vw;
-    background-image: url(/assets/img/background-main-definitive.svg);
+    background-image: url(../img/background-main-definitive.svg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -93,8 +93,11 @@ body{
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: 800;
-        color: #ffff;
+        color: $text-color;
         margin-left: 20px;
+    }
+    .header-logo:hover{
+        color: $linked-color-2;
     }
     .container-icon-header{
         display: flex;
@@ -104,7 +107,10 @@ body{
             background-color: transparent;
             border: none;
             i{
-                color: #ffff;
+                color: $text-color;
+            }
+            i:hover{
+                color: $linked-color-2;
             }
         }
     }
@@ -471,7 +477,13 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         .container-contacto{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            flex-wrap: wrap;
             .title-contacto{
                 width: 100%;
                 text-align: center;
@@ -486,11 +498,6 @@ body{
             .title-contacto:hover{
                 color: $linked-color;
             }
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            border-radius: 10px;
-            flex-wrap: wrap;
             .input-contacto{
                 width: 80%;
                 outline: none;
@@ -523,25 +530,47 @@ body{
                 background: linear-gradient(180deg, rgba(26,26,26,1) 74%, rgba(187,240,250,1) 97%);
                 color: $linked-color;
             }
-            .button-contacto {background-image: linear-gradient(to right, #314755 0%, #bbf0fa  51%, #314755  100%)}
             .button-contacto {
-                margin: 10px;
-                padding: 15px 45px;
-                text-align: center;
-                text-transform: uppercase;
-                transition: 0.5s;
-                background-size: 200% auto;
-                color: $linked-color;
-                box-shadow: 0 0 20px #eee;
-                border-radius: 10px;
-                display: block;
-                border: none;
+                background-image: linear-gradient(to right, #314755 0%, #bbf0fa  51%, #314755  100%)}
+                .button-contacto {
+                    margin: 10px;
+                    padding: 15px 45px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    transition: 0.5s;
+                    background-size: 200% auto;
+                    color: $linked-color;
+                    box-shadow: 0 0 20px #eee;
+                    border-radius: 10px;
+                    display: block;
+                    border: none;
                 }
                 .button-contacto:hover {
-               background-position: right center; /* change the direction of the change here */
-                color: $linked-color-2;
-                text-decoration: none;
+                    background-position: right center;
+                    color: $linked-color-2;
+                    text-decoration: none;
                 }
+        }
+        @media screen and (max-width: 750px) {
+            .container-contacto{
+                width: 100%;
+            }
+        }
+        .social-networks-container{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            .social-network-enlace{
+                margin: 10px 0;
+                i{
+                    color: $text-color;
+                }
+                i:hover{
+                    color: $linked-color-2;
+                }
+            }
         }
     }
 }
