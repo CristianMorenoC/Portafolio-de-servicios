@@ -50,6 +50,52 @@ function ocultarMenu(e) {
 	menu.classList.remove('visible')
 }
 
+//SLIDER PROYECTOS
+const slider = document.querySelector("#slider");
+let sliderSection = document.querySelectorAll(".slider-section");
+let sliderSectionLast = sliderSection[sliderSection.length -1 ];
+
+const btnIzquierdo = document.querySelector("#btn-izquierdo");
+const btnDerecho = document.querySelector("#btn-derecho");
+
+slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+
+function Next() {
+	let sliderSectionFirst = document.querySelectorAll(".slider-section")[0];
+	slider.style.marginLeft = "-200%";
+	slider.style.transition = "all 0.5s";
+	setTimeout(function() {
+		slider.style.transition = "none";
+		slider.insertAdjacentElement('beforeend', sliderSectionFirst);
+		slider.style.marginLeft = "-100%"
+	}, 500);
+}
+
+function Prev() {
+	let sliderSection = document.querySelectorAll(".slider-section");
+	let sliderSectionLast = sliderSection[sliderSection.length - 1];
+	slider.style.marginLeft = "0";
+	slider.style.transition = "all 0.5s";
+	setTimeout(function() {
+		slider.style.transition = "none";
+		slider.insertAdjacentElement('afterbegin', sliderSectionLast);
+		slider.style.marginLeft = "-100%"
+	}, 500);
+}
+
+btnDerecho.addEventListener('click', function() {
+	Next();
+});
+
+btnIzquierdo.addEventListener('click', function() {
+	Prev();
+})
+
+setInterval(function() {
+	Next();
+}, 5000);
+
+
 //	FORMULARIO
 
 const $form = document.querySelector('#contacto');
@@ -57,6 +103,8 @@ const agradecimiento = document.querySelector('#agradecimiento')
 
 $form.addEventListener('submit', handleSubmit);
 //nombre, email, enviar
+
+//API para enviar el formulario
 async function handleSubmit(event) {
 	event.preventDefault();
 	const form = new FormData(this);
@@ -72,3 +120,4 @@ async function handleSubmit(event) {
 		agradecimiento.classList.add('animacion-contact')
 	}
 }
+

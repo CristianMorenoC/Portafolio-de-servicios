@@ -374,94 +374,63 @@ body{
 
 // PROYECTOS
 
-
-// NAV
-
-.input-proyectos-container{
-    width: 100%;
+.proyectos-container{
     display: flex;
-    justify-content: center;
-    .input-proyectos{
-        border-radius: 10px;
-        outline: none;
-        padding: 5px 30px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+    .proyectos-titulo{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
     }
-    .input-proyectos:focus{
-        background-color: rgba(200, 200, 200, 0.2);
-    }
-    .button-proyectos{
-        width: 38px;
-        margin-left: 10px;
-        border-radius: 50%;
-        border: none;
-        background-color:rgba(0, 0, 0, 0.1);
-        i{
-            color: $linked-color-2;
+    .container-slider{
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 0 0 10px #1A1A1A, 0 15px 50px;
+        position: relative;
+        .slider{
+            display: flex;
+            width: 600%;
+            height: 400px;
+            margin-left: -100%;
+            .slider-section{
+                width: 100%;
+                .slider-img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
-    }
-}
-
-.filtro-proyectos-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .filtro-proyectos{
-        text-decoration: none;
-        font-weight: 400;
-        margin: 30px 20px;
-        color: $text-color;
-    }
-    .filtro-proyectos:focus{
-        font-weight: 800;
-        color: $primary-color;
-        text-decoration: line-through;
-    }
-}
-
-// GALERIA
-.servicios-title{
-    text-align: center;
-    margin: 30px 0;
-}
-
-.galeria-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 200px;
-    padding: 20px 40px;
-    grid-gap: 20px;
-    .galeria-item{
-        transition: all .5s;
-        .galeria-img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .slider-btn{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,.7);
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+            border-radius: 50%;
             cursor: pointer;
-            border-radius: 8px;
+            &:hover{
+                background: #fff;
+            }
+        }
+        .slider-btn-izquierdo{
+            left: 10px;
+        }
+        .slider-btn-derecho{
+            right: 10px;
         }
     }
-    .galeria-item:nth-child(1){
-        grid-row-start: span 2;
-    }
-    .galeria-item:nth-child(2){
-        grid-column-start: span 2;
-    }
-    .galeria-item:nth-child(4){
-        grid-row-start: span 2;
-    }
-    .galeria-item:nth-child(5){
-        grid-row-start: span 2;
-        grid-column-start: span 2;
-    }
-    .galeria-item:hover{
-        transform: scale(1.1);
-    }
 }
-@media screen and (min-width: 768px) {
-    .galeria-container{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
+
 
 // CONTACTO
 
@@ -594,21 +563,19 @@ body{
         animation-iteration-count: 1;
     }
 
-    .animacion-contact {
-        @keyframes submit {
-            0%{
-                opacity: 1;
-            }
-            20%{
-                right: 0;
-            }
-            90%{
-                right: 110%;
-            }
-            100% {
-                opacity: 0;
-                visibility: hidden;
-            }
+    @keyframes submit {
+        0%{
+            opacity: 1;
+        }
+        20%{
+            right: 0;
+        }
+        90%{
+            right: 110%;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
