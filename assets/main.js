@@ -2,7 +2,7 @@
 var typed = new Typed('.typed', {
 	strings: [
 		'<b class="desccription">DISEÑO <span class="description-color"> WEB</span></b>',
-		'<b class="desccription"><span class="description-color">FRONT-END: </span> HTML, JavaScript, CSS, bootstrap, SASS</b>',
+		'<b class="desccription"><span class="description-color">FRONT-END: </span> HTML, JavaScript, REACT, CSS, SASS</b>',
 		'<b class="desccription"><span class="description-color">METODOLOGIAS: </span> BEM, SCRUM</b>',
 		'<b class="desccription">DESARROLLADOR WEB: <span class="description-name"> CRISTIAN MORENO</span></b>',
 	],
